@@ -96,7 +96,7 @@ img.magazine{
     height: 16rem;
     display: flex;
     margin: 0 auto;
-    width: 60%;
+    width: 16rem;
 }
 .right-side h2{
     margin: 30px 10px;
@@ -219,5 +219,9 @@ footer .footer-button{
     }
     button{
         padding: 0.5rem 1rem;
+    }
+    img.magazine{
+        height: 10rem;
+        width: 10rem;
     }
 }
