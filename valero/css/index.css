@@ -7,7 +7,7 @@
     padding: 0;
     margin: 0;
 }
-body{
+body, html{
     width: 100%;
 }
 header{
@@ -16,16 +16,17 @@ header{
 }
 /* navigation bar */
 nav{
-    grid-area: nav;
     color: #fff;
     background-color: var(--primary);
     height: 300px;
+ 
 }
 
 img.header-logo{
-    margin: 5px 0 100px 10px;
+    margin: 5px 0 50px 10px;
     height: 70px;
-    width: 300px;
+    width: 200px;
+    overflow: hidden;
 }
 .nav-h1{
     text-align: center;
@@ -41,12 +42,12 @@ main{
     margin: 90px 0;
     flex-wrap: wrap;
     width: 100%;
-    justify-content: space-between;
 }
 .left-side{
     line-height: 35px;
     flex: 1;
     min-width: 200px;
+    padding-right: 15px;
 }
 .left-side h2{
     font-size: 2.2em;
@@ -89,14 +90,13 @@ i.fa-angle-double-right{
 }
 main .right-side{
     flex: 1;
-    /* position: relative; */
-    padding-left: 50px;
+    padding-left: 15px;
 }
 img.magazine{
     height: 16rem;
     display: flex;
-    margin: auto;
-    width: auto;
+    margin: 0 auto;
+    width: 60%;
 }
 .right-side h2{
     margin: 30px 10px;
@@ -113,18 +113,27 @@ img.magazine{
 .form div{
     display: inline-block;
 }
-.first-name{
-width: 45%;
-margin-right: 5%;
+.names{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
 }
-.last-name{    
-width: 45%
+.first-name{
+    width:  100%;
+}
+.first-name input, .last-name input{
+    width:  calc(100% - 30px);
+}
+.last-name{  
+   width: 100%;
+   max-width: 100%;
 }
 .email{
-width: 95.6%;
+    display: block;
+   width: calc(100% - 30px) ;
 }
 .company{    
-    width: 95.6%;
+    width: calc(100% - 30px);
 }
 input{
     padding: 10px;
@@ -143,7 +152,7 @@ input{
     margin-top: 70px;
 }
 button{
-    padding: 20px 50px;
+    padding: 1.5rem 2.2rem;
     background-color: var(--dark);
     color: #fff;
     font-weight: 900;
@@ -179,7 +188,7 @@ footer p{
 }
 .footer-logo{
     height: 50px;
-    width: 250px;
+    width: 200px;
 }
 .footer-right{
     display: flex;
@@ -204,3 +213,11 @@ footer .footer-button{
     border: none;
 }
 
+@media (max-width: 700px){
+    .small-btn{
+        display: none;
+    }
+    button{
+        padding: 0.5rem 1rem;
+    }
+}
